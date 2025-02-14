@@ -4,12 +4,12 @@ import { TextField } from "@mui/material";
 const SearchBar = ({ searchTerm, onSearchChange }) => {
     return (
         <TextField
+            fullWidth
             label="Rechercher un utilisateur"
             variant="outlined"
-            fullWidth
-            margin="normal"
             value={searchTerm}
             onChange={onSearchChange}
+            margin="normal"
         />
     );
 };
