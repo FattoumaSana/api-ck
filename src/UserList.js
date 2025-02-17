@@ -59,7 +59,18 @@ const UserList = () => {
                 {filteredUsers.map((user) => (
                     <Grid item key={user.id} xs={12} sm={6} md={4}>
                         <Fade in={true} timeout={1000}>
-                            <Card onClick={() => handleClickOpen(user)} style={{ cursor: "pointer" }}>
+                            <Card
+                             sx={{
+                                color: "white",
+                                borderRadius: "12px",
+                                transition: "0.3s",
+                                border: "1px  #1976d2 solid transparent",
+                                "&:hover": {
+                                    border: "1px solid #1976d2", // Contour bleu au survol
+                                    boxShadow: "0px 0px 15px 2px #1976d2", // Effet lumineux bleu
+                                },
+                            }}
+                            onClick={() => handleClickOpen(user)} style={{ cursor: "pointer" }}>
                                 <CardContent>
                                     <Typography variant="body1" color="text.secondary">
                                         <PersonIcon fontSize="small" /> {user.username}
